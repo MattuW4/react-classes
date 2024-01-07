@@ -1,14 +1,10 @@
-import css from './App.module.css';
-import Sidebar from "./components/Sidebar";
-import NavBarSimple from "./components/NavBarSimple";
+import "./App.css";
+import MethodsAsPropsParent from "./components/MethodsAsPropsParent";
 
 function App() {
-  return (
-    <div className={css.NavBar}>
-      {/* Add your components here */}
-      <NavBarSimple />
-    </div>
-  );
+  return <div className="App">
+      <MethodsAsPropsParent />
+  </div>;
 }
 
 export default App;
