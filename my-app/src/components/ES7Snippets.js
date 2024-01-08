@@ -1,4 +1,4 @@
-// rfce
+// rfce - create function
 // import React from 'react'
 
 // function ES7Snippets() {
@@ -9,7 +9,7 @@
 
 // export default ES7Snippets
 
-// rafce
+// rafce - create a react arrow 4
 // import React from 'react'
 
 // const ES7Snippets = () => {
@@ -20,7 +20,7 @@
 
 // export default ES7Snippets
 
-// rce
+// rce - create class 
 // import React, { Component } from 'react'
 
 // export class ES7Snippets extends Component {
@@ -33,7 +33,7 @@
 
 // export default ES7Snippets
 
-// rconst 
+// rconst - create constructor
 // constructor(props) {
 //   super(props)
 
