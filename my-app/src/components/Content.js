@@ -10,15 +10,27 @@ export class Content extends Component {
 
         this.state = {
             isLoaded: false,
+            posts: [],
         }
     }
 
     componentDidMount() {
-        setTimeout(()=>{
+        setTimeout(() => {
             this.setState({
                 isLoaded: true,
+                posts: savedPosts,
             })
         }, 2000)
+    }
+
+    handleChange = (event) => {
+        const name = event.target.value.toLowerCase();
+        const filteredPosts = savedPosts.filter(post => {
+            return post.name.toLowerCase().includes(name)
+        })
+        this.setState({
+            posts: filteredPosts, 
+        })
     }
 
     render() {
@@ -27,12 +39,25 @@ export class Content extends Component {
 
                 <div className={css.TitleBar}>
                     <h1>My Photos</h1>
+                    <form>
+                        <div>
+                            <label htmlFor="searchInput">Search:</label>
+                            <input
+                                onChange={(e) => this.handleChange(e)}
+                                id="searchInput"
+                                type="text"
+                            />
+                            <h4>
+                                posts found: {this.state.posts.length}
+                            </h4>
+                        </div>
+                    </form>
                 </div>
 
                 <div className={css.SearchResults}>
                     {
                         this.state.isLoaded ?
-                            <PostItem savedPosts={savedPosts} /> : <Loader />
+                            <PostItem savedPosts={this.state.posts} /> : <Loader />
                     }
 
                     // {/* Part 1: Creating the map function */}
