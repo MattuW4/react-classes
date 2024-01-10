@@ -1,9 +1,9 @@
 import "./App.css";
-import Content from "./components/Content";
+import UseStateWithArrays from "./components/UseStateWithArrays";
 
 function App() {
   return <div className="App">
-      <Content />
+      <UseStateWithArrays />
   </div>;
 }
 
