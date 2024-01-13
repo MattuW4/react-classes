@@ -1,9 +1,9 @@
 import "./App.css";
-import UseStateWithArrays from "./components/UseStateWithArrays";
+import ContentHooks from "./components/ContentHooks";
 
 function App() {
   return <div className="App">
-      <UseStateWithArrays />
+      <ContentHooks />
   </div>;
 }
 
