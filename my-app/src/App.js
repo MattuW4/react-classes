@@ -1,9 +1,9 @@
 import "./App.css";
-import HTTPRequests from "./components/HTTPRequests";
+import ContentAPI from "./components/ContentAPI";
 
 function App() {
   return <div className="App">
-      <HTTPRequests />
+      <ContentAPI />
   </div>;
 }
 
